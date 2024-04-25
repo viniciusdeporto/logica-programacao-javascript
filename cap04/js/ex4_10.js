@@ -9,12 +9,12 @@ form.addEventListener("submit", (e) => {
         resp1.innerText = `Os lados podem formar um triângulo, 3 lados Iguais`
         resp2.innerText = `Tipo: Equilátero`
     }
-    else if (ladoA == ladoB != ladoC || ladoB == ladoC != ladoA || ladoC == ladoB != ladoA) {
+    else if ((ladoA != ladoB && ladoC) && (ladoB != ladoC && ladoA) && (ladoC != ladoB && ladoA)) {
         resp1.innerText = `Os lados podem formar um triângulo, 3 lados diferentes`
         resp2.innerText = `Tipo: Escaleno`
 
-    } 
-    else if (ladoA == ladoB && ladoC != ladoB) {
+    }
+    else if ((ladoA == ladoB && ladoB != ladoC) || (ladoB == ladoC && ladoC != ladoA) || (ladoC == ladoA && ladoA != ladoB)) {
         resp1.innerText = `Os lados podem formar um triângulo, 2 lados iguais`
         resp2.innerText = `Tipo: Isóceles`
     }
