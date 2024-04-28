@@ -6,12 +6,17 @@ form.addEventListener("submit", (e) => {
 
 
     const numero = Number(form.numero.value)
-    let resposta = `Entre ${numero} e 1: `
+    let resposta = `Entre ${numero} e 1: ${numero}`
 
-    for (let i = numero; i >= 0; i = i - 1){
-        resposta = resposta  + i + ", "
-
+    for(let i = numero - 1; i > 0; i--){
+        resposta = resposta + ", " + i
     }
+
+    // let resposta = `Entre ${numero} e 1: `
+
+    // for (let i = numero; i >= 0; i = i - 1){
+    //     resposta = resposta  + i + ", "
+    // }
 
     resp.innerHTML = resposta       
 
