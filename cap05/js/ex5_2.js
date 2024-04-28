@@ -8,13 +8,19 @@ form.addEventListener("submit", (e) => {
     const numero = Number(form.numero.value)
     let resposta = `Entre ${numero} e 1: `
 
-    for (let i = numero; i >= 0; i = i - 1){
-        resposta = resposta  + i + ", "
+    for (let i = numero; i >= 2; i = i - 1) {
+
+        // if (i == 1) {
+            resposta = resposta + i + ", "
+        // } else {
+        //     resposta = resposta + i + ", "
+        // }
+
 
     }
 
-    resp.innerHTML = resposta       
+    resp.innerHTML = resposta + "1."
 
-    
+
     console.log()
 })
