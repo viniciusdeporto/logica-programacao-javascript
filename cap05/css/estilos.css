@@ -12,8 +12,13 @@ img.alta{
 
 h1{
     border-bottom-style: inset;
+    text-align: center;
 }
 
 pre{
     font-size: 1.2em;
+}
+
+form{
+    text-align: center;
 }
