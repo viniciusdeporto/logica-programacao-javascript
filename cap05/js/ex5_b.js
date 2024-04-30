@@ -1,14 +1,17 @@
 const form = document.getElementById("form")
-const resp = document.getElementById("resp")
+const resp = document.querySelector("h3")
 
 form.addEventListener("submit", (e) => {
     const chin = Number(form.chinchilas.value)
     const anos = Number(form.anos.value)
 
     let resultado = ""
+    let valorDuplicado = 0;
     for (let i = 1; i <= anos; i++) {
 
-        resultado = resultado + `${i}º Ano: ${chin} Chinchilas\n`
+        valorDuplicado = i * chin       
+        
+        resultado = resultado + `${i}º Ano: ${valorDuplicado} Chinchilas\n`
 
     }
 
@@ -16,4 +19,4 @@ form.addEventListener("submit", (e) => {
 
 
     e.preventDefault()
-})
+})  
