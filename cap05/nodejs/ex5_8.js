@@ -1,5 +1,5 @@
-// const prompt = require("prompt-sync")()
-console.log("Programa Anos de Copa do mundo, Dogote 0 para sair")
+const prompt = require("prompt-sync")()
+console.log("Programa Anos de Copa do mundo, Digite 0 para sair")
 console.log("----------------------------------------------------")
 
 do {
