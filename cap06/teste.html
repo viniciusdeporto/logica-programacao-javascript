@@ -1,39 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
 
-
     <script>
-        const cidades = ['araçatuba', 'birigui', 'penapolis','sao paulo']
-        // for (let i = 0; i <= cidades.length; i++) {
-        //     console.log(cidades[i])
-        // }
 
-        // console.log("-".repeat(40))
-        // console.log(cidades.toString())
-        // console.log(cidades.join(" - "))
+        const carros = []
+
+        carros.push({modelo: "hb20", preco: "120.000"})
+        carros.push({modelo: "creta", preco: "150.000"})
+
+        for(const carro of carros){
+            console.log(`${carro.modelo} - R$: ${carro.preco}`)
+        }
 
 
-        // for(const cidade of cidades){
-        //     console.log(cidade)
-        // }
 
-        // cidades.forEach((cidade, i) => {
-        //     console.log(`${i + 1}ª Cidade: ${cidade}`)
-        //     console.log(`${cidade} ${i+1}`)
-        // })
 
-        cidades.forEach((cidade, index) => {
-            console.log(`${index + 1}ª ${cidade}`)
-        })
     </script>
+    
 </body>
-
 </html>
