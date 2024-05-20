@@ -11,114 +11,17 @@
 
     <script>
 
-        // const carros = []
-
-        // carros.push({modelo: "hb20", preco: "120.000"})
-        // carros.push({modelo: "creta", preco: "150.000"})
-
-        // for(const carro of carros){
-        //     console.log(`${carro.modelo} - R$: ${carro.preco}`)
-        // }
 
 
-        // const carros = []
-        // const modelo = "Fiesta"
-        // const preco = 46800
-        // carros.push({modelo:modelo, preco:preco})
+        const criancas = [
+            { nome: 'vinicius', idade: 12 },
+            { nome: 'joao', idade: 15}
+        ]
+
+        const copia = [...criancas];
+        console.log(copia[0].idade)
 
 
-        // for(const carro of carros){
-        //     const {modelo, preco} = carro
-
-        //     console.log(`${modelo} - R$: ${preco}`)
-        // }
-
-
-        // const nomes = ['pedro', 'cidinha', 'cintia', 'linderberg']
-        // const [a, b, c, d] = nomes
-
-        // console.log(a)
-        // console.log(b)
-        // console.log(c)
-        // console.log(d)
-
-
-        //const pacientes = ['pedro', 'cintia', 'vinicius', 'coração']
-        // const [atender, proximo, ...outros] = pacientes
-        // console.log(atender)
-        // console.log(proximo)
-        // console.log(outros)
-
-        // const nPacientes = [...pacientes]
-        // console.log(nPacientes)
-
-        // let pacientes = ['joao', 'sofia']
-        // pacientes = ['vinicius', ...pacientes]
-        // pacientes.push('tetinha')
-        // console.log(pacientes)
-
-
-        // const idades = [15, 14, 17, 10, 11]
-        // let maiores = 0
-        // for(const idade of idades){
-        //     if(idade >= 18){
-        //         console.log(idade)
-        //         maiores = 1;
-        //     }
-        // }
-        // if(!maiores){
-        //     console.log("Não há idades maiores que 18 na lista!")
-        // }
-
-
-        // const numeros = [10, 20, 30, 40, 50]
-        // const dobros = numeros.map(n => n * 2)
-
-        // console.log(dobros.join(', '))
-
-        // const amigos = [
-        //     { nome: 'vinicius', idade: 34 },
-        //     { nome: 'maiara', idade: 27 }
-        // ]
-
-        // const amigos2 = amigos.map(aux => ({ nome: aux.nome, nasc: 2024 - aux.idade }))
-
-
-        // for (const amigo of amigos2){    
-
-        //     console.log(`${amigo.nome} - Nasceu em: ${amigo.nasc}`)
-
-        // }
-
-
-        // const numeros = [10, 20, 30, 3]
-
-        // const pares = numeros.filter(function(num){
-        //     if(num % 2 == 0){
-        //         console.log(`${num} é par`)
-        //     }else{
-        //         console.log(`${num} não é par`)
-        //     }
-        // })
-        // console.log(pares.join(', '))
-
-
-        // const amigos = [
-        //     { nome: 'Ana', idada: 20 },
-        //     { nome: 'Bruno', idade: 17 },
-        //     { nome: 'Cátia', idade: 25 },
-        // ]
-        // const amigos2 = amigos.filter(aux => aux.idade >= 21 || aux.nome.includes('B'))
-
-
-
-        const numeros = [10,20,30]
-        const produto = numeros.reduce((a, b) => {
-            return a + b
-        },0)
-
-        console.log(produto)
-        
 
     </script>
 
