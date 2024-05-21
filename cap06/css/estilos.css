@@ -18,6 +18,16 @@ pre{
     font-size: 1.2em;
 }
 
+#resp1{
+    font-size: 1.2em;
+    font-weight: 800;
+}
+
+#resp2{
+    font-size: 1.2em;
+    font-weight: 800;
+}
+
 .fonte-azul{
     color: blue;
 }
