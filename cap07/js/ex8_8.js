@@ -17,13 +17,27 @@ frm.addEventListener("submit", (e) => {
 
     const partes = dataVenc.split("-")
     vencto.setDate(Number(partes[2]))
-    vencto.setDate(Number(partes[1]))
+    vencto.setMonth(Number(partes[1]) - 1)
     vencto.setFullYear(Number(partes[0]))
+
 
     const atraso = hoje - vencto
     let multa = 0
     let juros = 0
 
+    if(atraso > 0){
+        const dias = atraso / 86400000
+        multa = valor * TAXA_MULTA
+        juros = valor * TAXA_JUROS * dias
 
+    }
+
+    const total = valor + multa + juros 
+    
+    frm.outMulta.value = multa.toFixed(2)
+    frm.outJuros.value = juros.toFixed(2)
+    frm.outTotal.value = total.toFixed(2)
+
+    
 
 })
