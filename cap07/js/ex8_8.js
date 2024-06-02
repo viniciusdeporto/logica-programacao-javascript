@@ -20,7 +20,7 @@ frm.addEventListener("submit", (e) => {
     vencto.setMonth(Number(partes[1]) - 1)
     vencto.setFullYear(Number(partes[0]))
 
-
+    console.log(vencto)
     const atraso = hoje - vencto
     let multa = 0
     let juros = 0
