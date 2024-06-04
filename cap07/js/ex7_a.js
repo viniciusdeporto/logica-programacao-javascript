@@ -1,35 +1,53 @@
-// Seleciona o formulário e o elemento de resposta
-const frm = document.querySelector("form");
-const resp = document.querySelector("h3");
+const frm = document.querySelector("form") // obtém elementos da página
+const resp = document.querySelector("h3")
 
-// Adiciona um evento ao formulário para lidar com o envio
-frm.addEventListener("submit", (e) => {
-    e.preventDefault(); // Evita o envio padrão do formulário
+frm.addEventListener("submit", (e) => {          // "escuta" evento submit do form
+  e.preventDefault()                             // evita envio do form
+  const mensagem = frm.inMensagem.value          // conteúdo do campo
 
-    let mensagemCriptografada = ""; // Inicializa a string para a mensagem criptografada
-    const mensagem = frm.mensagem.value; // Obtém a mensagem do formulário
+  let resposta = ""
+  const tam = mensagem.length
 
-    let letrasPares = ""; // String para letras de índices pares
-    let letrasImpares = ""; // String para letras de índices ímpares
+  // laço para pegar anas letras das posições pares ( programação, ímpares)
+  for (let i = 1; i < tam; i = i + 2) {
+    resposta += mensagem.charAt(i)
+  }
 
-    // Itera sobre cada caractere da mensagem
-    for (let i = 0; i < mensagem.length; i++) {
-        if (i % 2 === 0) {
-            letrasPares += mensagem[i]; // Adiciona letras de índices pares
-        } else {
-            letrasImpares += mensagem[i]; // Adiciona letras de índices ímpares
-        }
-    }
+  console.log(mensagem.charAt(0))
 
-    // Combina as letras pares e ímpares
-    mensagemCriptografada = letrasPares + letrasImpares;
+  // laço para pegar as letras das posições ímpares (na programação, pares)
+  for (let i = 0; i < tam; i = i + 2) {
+    resposta += mensagem.charAt(i)
+  }
 
-    // Exibe a mensagem criptografada no elemento de resposta
-    resp.textContent = mensagemCriptografada;
-});
-
-frm.btDescript.addEventListener("submit", (e)=>{
-  e.preventDefault()
-  resp.innerText = `${mensagem}`
+  resp.innerText = resposta
 })
 
+frm.btDecript.addEventListener("click", () => {
+  // verifica se as validações do form estão ok (no caso, mensagem is required)
+  if (!frm.checkValidity()) {
+    alert("Informe a mensagem criptografada")
+    frm.inMensagem.focus() // posiciona o cursor no campo
+    return // retorna ao form
+  }
+  const mensagem = frm.inMensagem.value          // conteúdo do campo
+
+  const tam = mensagem.length
+  const metade = Math.floor(tam / 2)
+  let resposta = ""
+
+  if (tam % 2 == 0) {
+    for (let i = metade; i < tam; i++) {
+      resposta += mensagem.charAt(i)
+      resposta += mensagem.charAt(i - metade)
+    }
+  } else {
+    for (let i = metade; i < tam - 1; i++) {
+      resposta += mensagem.charAt(i)
+      resposta += mensagem.charAt(i - metade)
+    }
+    resposta += mensagem.charAt(i)
+  }
+
+  resp.innerText = resposta
+})
