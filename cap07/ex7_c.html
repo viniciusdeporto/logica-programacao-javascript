@@ -15,6 +15,23 @@
         da multa. Informe qual a data limite do pagamento com desconto(até 90 dias) e o
         valor a ser pago até essa data (com 20% de desconto). -->
 
+    <img src="./img/exerc.jpg" alt="">
+    <h1>Multa de Trânsito</h1>
+    <form>
+        <p>
+            Data da Infração:
+            <input type="date" id="data" required>
+        </p>
+        <p>
+            Valor da Multa R$:
+            <input type="number" id="multa" step="0.01" required>
+        </p>
+        <input type="submit" value="Calcular Data Limite e Valor">
+    </form>
+
+    <h3 id="resp1"></h3>
+    <h3 id="resp2"></h3>
+
 
 
     <script src="./js/ex7_c.js"></script>
