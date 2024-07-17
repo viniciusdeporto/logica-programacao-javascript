@@ -14,4 +14,6 @@ const calcularMedia = (...notas) => {
     console.log(`Média: ${media.toFixed(1)}`)
 }
 
-calcularMedia()
+let arr = [2, 5, 6, 7, 8]
+
+calcularMedia(...arr)
